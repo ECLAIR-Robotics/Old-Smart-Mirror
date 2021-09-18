@@ -17,7 +17,7 @@ file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 # Find header files
 file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/inc/*.hpp)
 # Add the exectuble to start jarvis
-add_executable(jarvis.csj jarvis.cpp)
+add_executable(jarvis.csj jarvis.cpp hello_arpan.cpp)
 
 # Set directories to search for header files
 include_directories(${CMAKE_SOURCE_DIR}/inc)
