@@ -37,7 +37,7 @@ int main(int argc, char **argv)
     glutInitWindowPosition(100, 100);
     glutCreateWindow("OpenGL - Creating a triangle");
     glutDisplayFunc(drawTriangle);
-    glutDisplayFunc(hello_arpan::drawRectangle());
+    glutDisplayFunc(hello_arpan::drawRectangle);
     glutMainLoop();
     return 0;
 }
