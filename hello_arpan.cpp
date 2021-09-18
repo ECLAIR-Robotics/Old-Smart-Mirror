@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <GL/glew.h>
+#include <GL/glut.h>
+#include <GLFW/glfw3.h>
+
+#include <glm/glm.hpp>
+
+
 #include "inc/hello_arpan.hpp"
 
 void hello_arpan::drawRectangle()
