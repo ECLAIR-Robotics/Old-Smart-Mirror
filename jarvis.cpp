@@ -6,6 +6,8 @@
 
 #include <glm/glm.hpp>
 
+#include "inc/hello_arpan.hpp"
+
 //#include "constants.hpp"
 
 using namespace glm;
@@ -35,6 +37,7 @@ int main(int argc, char **argv)
     glutInitWindowPosition(100, 100);
     glutCreateWindow("OpenGL - Creating a triangle");
     glutDisplayFunc(drawTriangle);
+    glutDisplayFunc(hello_arpan::drawRectangle())
     glutMainLoop();
     return 0;
 }
