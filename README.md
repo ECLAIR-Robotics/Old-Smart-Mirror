@@ -26,6 +26,7 @@ We're using GitHub, so we'll follow its [collaborative development model](https:
      4. Any bugs or problems you faced
      5. Things you're doing in your code that might be problematic
      6. Limitations of the module
+10. Once Sahil has reviewed your pull request and has any suggestions, you can make them in your branch, commit, and push. Resolve any requested changes you've completed and re-request a review. The button to do this is on the right side-bar under your pull request with a recycling icon.
 
 ## Setting up Remote Development
 Since setting up all the dependencies for a project is extremely challenging since they are platform development, you can test your code on the Raspberry Pi remotely.
