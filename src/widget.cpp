@@ -1,11 +1,16 @@
 #include "widget.hpp"
 #include "constants.hpp"
+using std::string;
 
-// Default Constructor
-Widget::Widget() {
-    position_x = 0;
-    position_y = 0;
-    height = 10;
-    width = 10;
-    name = "widget";
+// Constructor
+Widget::Widget(int x, int y, int h, int w, string n) {
+    updatePosition(x, y);
+    height = h;
+    width  = w;
+    name   = n;
+}
+
+void Widget::updatePosition(int x, int y) {
+    positionX = x;
+    positionY = y;
 }
