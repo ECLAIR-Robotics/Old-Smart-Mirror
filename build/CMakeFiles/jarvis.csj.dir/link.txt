@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/jarvis.csj.dir/jarvis.cpp.o  -o jarvis.csj  /home/pi/glfw/src/src/libglfw3.a /usr/lib/arm-linux-gnueabihf/libGL.so -lGLU -lglut -lpthread /usr/lib/arm-linux-gnueabihf/librt.so /usr/lib/arm-linux-gnueabihf/libm.so -ldl 

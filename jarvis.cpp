@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include "widget.hpp"
+
 #include <GL/glew.h>
 #include <GL/glut.h>
 #include <GLFW/glfw3.h>
 
 #include <glm/glm.hpp>
 
-//#include "constants.hpp"
+#include "constants.hpp"
 
 using namespace glm;
 
