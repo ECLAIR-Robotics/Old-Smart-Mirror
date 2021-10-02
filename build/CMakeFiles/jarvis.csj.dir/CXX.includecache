@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/pi/Documents/jarvis/constants.hpp
+
 /home/pi/Documents/jarvis/jarvis.cpp
 stdio.h
 -
@@ -19,6 +21,8 @@ GLFW/glfw3.h
 -
 glm/glm.hpp
 -
+constants.hpp
+/home/pi/Documents/jarvis/constants.hpp
 
 /home/pi/glfw/include/GLFW/glfw3.h
 stddef.h
