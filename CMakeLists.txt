@@ -29,4 +29,7 @@ find_package(OpenGL REQUIRED)
 #find_package(GLM REQUIRED)
 #message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 
-target_link_libraries(jarvis.csj glfw OpenGL::GL GLU glut)
+# Add libraries
+add_library(jar ${STADYN} ${SOURCE_FILES} ${HEADER_FILES})
+
+target_link_libraries(jarvis.csj glfw OpenGL::GL GLU glut jar)

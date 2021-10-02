@@ -1,3 +1,7 @@
+#include <string>
+
+using std::string;
+
 class Widget{
     public:
         // Dimension and locations for each widget
@@ -7,4 +11,7 @@ class Widget{
         int width;
 
         string name;
-}
+
+        // Default constructor
+        Widget();
+};
