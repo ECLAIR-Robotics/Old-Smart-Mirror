@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include "widget.hpp"
 
 #include <GL/glew.h>
 #include <GL/glut.h>
@@ -10,24 +9,13 @@
 #include <glm/glm.hpp>
 
 #include "constants.hpp"
+#include "triangleWidget.hpp"
 
 using namespace glm;
+TriangleWidget triangle = TriangleWidget(100, 100, 500, 500, "Triangle Widget");
 
-void drawTriangle()
-{
-    glClearColor(0.4, 0.4, 0.4, 0.4);
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    glColor3f(1.0, 1.0, 1.0);
-    glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
-
-        glBegin(GL_TRIANGLES);
-                glVertex3f(-0.7, 0.7, 0);
-                glVertex3f(0.7, 0.7, 0);
-                glVertex3f(0, -1, 0);
-        glEnd();
-
-    glFlush();
+void drawWidgets() {
+    triangle.renderWidget();
 }
 
 int main(int argc, char **argv)
@@ -37,7 +25,8 @@ int main(int argc, char **argv)
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("OpenGL - Creating a triangle");
-    glutDisplayFunc(drawTriangle);
+
+    glutDisplayFunc(drawWidgets);
     glutMainLoop();
     return 0;
 }

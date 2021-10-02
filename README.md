@@ -37,6 +37,7 @@ Since setting up all the dependencies for a project is extremely challenging sin
 
 ## Testing your Code
 Running your code is fairly straightforward. Make sure you're in a directory with a name like `../Smart-Mirror/` and you have files like `CMakeLists.txt` in it. You can check using `ls`.
-1. Run `cmake .` to configure dependencies and generate the `Makefile` you need to build the project.
-2. Run `make` to build the executable.
-3. Run the command `DISPLAY=":0.0" ./jarvis.csj` and look at the Discord stream to see the results. Make sure you run `make` again after making changes.
+1. Run `cmake -S . -B build/` to configure dependencies and generate the `Makefile` you need to build the project.
+2. Run `cd build` to change directories into the build folder.
+3. Run `make` to build the executable.
+4. Run the command `DISPLAY=":0.0" ./jarvis.csj` and look at the Discord stream to see the results. Make sure you run `make` again after making changes.

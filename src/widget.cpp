@@ -1,5 +1,4 @@
 #include "widget.hpp"
-#include "constants.hpp"
 #include <string>
 using std::string;
 
@@ -9,6 +8,8 @@ Widget::Widget(int x, int y, int h, int w, std::string n) {
     height = h;
     width  = w;
     name   = n;
+    changeInRender  = true;
+    selectedByMouse = false;
 }
 
 void Widget::updatePosition(int x, int y) {

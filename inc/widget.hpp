@@ -1,6 +1,10 @@
 #include <string>
+using namespace std;
+#include <GL/glew.h>
+#include <GL/glut.h>
+#include <GLFW/glfw3.h>
 
-using std::string;
+#include <glm/glm.hpp>
 
 class Widget{
     public:
@@ -22,8 +26,18 @@ class Widget{
 
         Widget(int x, int y, int h, int w, std::string n);
 
-        void render();
+        void renderWidget() {
+            if (changeInRender) {
+                changeInRender = false;
+                render();
+                glutPostRedisplay();
+            }
+        }
 
         // When a user is dragging and moving the widget elsewhere
         void updatePosition(int x, int y);
+
+    private:
+        virtual void render() {};
+
 };

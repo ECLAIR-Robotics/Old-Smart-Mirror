@@ -31,5 +31,5 @@ find_package(OpenGL REQUIRED)
 
 # Add libraries
 add_library(jar ${STADYN} ${SOURCE_FILES} ${HEADER_FILES})
-
+target_link_libraries(jar glfw OpenGL::GL GLU glut)
 target_link_libraries(jarvis.csj glfw OpenGL::GL GLU glut jar)
