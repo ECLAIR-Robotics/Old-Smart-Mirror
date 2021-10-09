@@ -6,6 +6,9 @@ using namespace std;
 
 #include <glm/glm.hpp>
 
+#ifndef WIDGET_H
+#define WIDGET_H
+
 class Widget{
     public:
         // Dimension and locations for each widget
@@ -41,3 +44,5 @@ class Widget{
         virtual void render() {};
 
 };
+
+#endif
