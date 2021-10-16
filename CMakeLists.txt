@@ -25,12 +25,12 @@ add_executable(jarvis.csj jarvis.cpp)
 include_directories(${CMAKE_SOURCE_DIR}/inc ${CMAKE_SOURCE_DIR}/nlohmann_json/include)
 
 # OpenGL
-# find_package(OpenGL REQUIRED)
-find_package(openssl REQUIRED)
+find_package(OpenSSL REQUIRED)
+
 
 # GLM
 #find_package(GLM REQUIRED)
 #message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 
 
-target_link_libraries(jarvis.csj PRIVATE nlohmann_json::nlohmann_json libssl libcrypto)
+target_link_libraries(jarvis.csj PRIVATE nlohmann_json::nlohmann_json OpenSSL::SSL)
