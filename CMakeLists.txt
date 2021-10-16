@@ -5,12 +5,14 @@ project(Jarvis_3.0)
 # Set Stadard Cmake variables
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_BUILD_TYPE DEBUG)
+set(JSON_BuildTests OFF CACHE INTERNAL "")
 
 # Set GLFW build variables to not build tests or examples
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-add_subdirectory(/home/pi/glfw /home/pi/glfw/src)
+# add_subdirectory(/home/pi/glfw /home/pi/glfw/src)
+add_subdirectory(nlohmann_json)
 
 # Find source files
 file(GLOB_RECURSE SOURCE_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
@@ -20,13 +22,15 @@ file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/inc/*.hpp)
 add_executable(jarvis.csj jarvis.cpp)
 
 # Set directories to search for header files
-include_directories(${CMAKE_SOURCE_DIR}/inc)
+include_directories(${CMAKE_SOURCE_DIR}/inc ${CMAKE_SOURCE_DIR}/nlohmann_json/include)
 
 # OpenGL
-find_package(OpenGL REQUIRED)
+# find_package(OpenGL REQUIRED)
+find_package(openssl REQUIRED)
 
 # GLM
 #find_package(GLM REQUIRED)
 #message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 
-target_link_libraries(jarvis.csj glfw OpenGL::GL GLU glut)
+
+target_link_libraries(jarvis.csj PRIVATE nlohmann_json::nlohmann_json libssl libcrypto)
